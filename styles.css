@@ -1,6 +1,5 @@
 :root {
   color-scheme: light dark;
-  --link-color: #0000ee;
   background-color: #ffffff;
   color: #000000;
   font-family: system-ui, -apple-system, sans-serif;
@@ -24,7 +23,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --link-color: #8ab4f8;
     background-color: #000000;
     color: #ffffff;
   }
@@ -61,6 +59,6 @@ main > :last-child {
 
 a,
 a:visited {
-  color: var(--link-color);
+  color: inherit;
   text-decoration: underline;
 }
