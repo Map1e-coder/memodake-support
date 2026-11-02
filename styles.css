@@ -1,0 +1,66 @@
+:root {
+  color-scheme: light dark;
+  --link-color: #0000ee;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 106.25%;
+  font-weight: 400;
+  /* Native body text at 17pt has an approximately 27pt line pitch.
+     Its font-metrics multiplier of 1.35 is not a CSS font-size multiplier. */
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+@supports (font: -apple-system-body) {
+  @media (hover: none) {
+    :root {
+      font: -apple-system-body;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --link-color: #8ab4f8;
+    background-color: #000000;
+    color: #ffffff;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  box-sizing: border-box;
+  max-width: 44rem;
+  margin-inline: auto;
+  padding: 25px;
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  font: inherit;
+}
+
+strong {
+  font-weight: inherit;
+}
+
+h1,
+p {
+  margin: 0 0 1.6em;
+}
+
+main > :last-child {
+  margin-bottom: 0;
+}
+
+a,
+a:visited {
+  color: var(--link-color);
+  text-decoration: underline;
+}
